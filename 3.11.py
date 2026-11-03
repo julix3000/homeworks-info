@@ -1,3 +1,5 @@
+# 1 - 29
+
 """
 # №2 - wzxy
 
@@ -12,6 +14,10 @@ for x in range(2):
                 if not(f(x,y,w,z)):
                     print(w, z, x, y)
 """
+
+# 3 - 130
+
+# 4 - 011
 
 """
 #5 - 17
@@ -57,7 +63,9 @@ for a in al:
                     k += 1
 print(k)
 """
+# 9 - я не нашла условия
 
+# 10 - у меня не открываются файлики
 """
 # 11 - 138
 
@@ -66,6 +74,9 @@ for n in range(1000000000):
         print(n)
         break
 """
+# 12 - я ниче не поняла
+
+# 13 - я не умею айпи делать
 
 """
 # 14 - 972
@@ -84,7 +95,7 @@ for x in range(1000, 1, -1):
         print(x)
         break
 """
-
+#15 - 231 (77*3)
 """
 # 16 - 2500500
 
@@ -98,6 +109,28 @@ print(f[3000] - f[2000])
 """
 
 """
+# 17 - 178, 593
+m, k = 1000000000, 0
+f =  open('C:\\Users\\Home4\\Downloads\\17var07.txt') 
+f = list(map(int, list(f)))
+c = min(f)
+
+
+for i in range(1, len(f)):
+    a, b = int(f[i-1]), int(f[i])
+    if a%44 + b%44 == c:
+        k += 1
+        m = min(m, abs(a - b))
+
+print(k, m)
+"""
+
+#18 - 2661, 1088
+
+#19 - 88
+#20 - 91, 92
+
+"""
 # 21 - 94
 
 print(88*4)
@@ -109,6 +142,7 @@ print(c)
 
 """
 
+# 22 - 8
 
 """
 # 23 - 40
@@ -130,4 +164,25 @@ for i in range(9, 30):
     f[i * 3] += f[i]
     
 print(f[30])
+"""
+"""
+# 24 - 356
+
+f = str((open("24var07.txt").read())).replace('-', '*') + '2'
+
+a = '0123456789'
+l, t= 0, 0
+for i in range(len(list(f))-1):
+    fl = 1
+    if f[i] in a and f[i-1] == '0' and f[i-2] == '*':
+        fl = 0
+    if f[i] == '*' and ( f[i+1] == '*' or f[i+1] == ' '):
+        fl = 0
+    if t == 0 and (f[i] == '0' and f[i+1] in a or f[i] == '*'):
+        fl = 0
+    
+    t = fl * (t + 1)
+    l = max(l, t)
+print(l)
+    
 """
