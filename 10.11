@@ -1,0 +1,196 @@
+# 1 - 35
+
+# 2 - xyzw
+"""
+def f(x, y, z, w):
+    return (not(z) or w) and (not(y) == w) and x 
+
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                if f(x, y, z, w):
+                    print(x, y, z, w)
+
+"""
+
+# 3 - 2237705
+
+# 4 - 16
+"""
+# 5 - 
+
+s = 100000000000000000
+def f(n, a):
+    res = ''
+    while n > 0:
+        res += f'{n%a}'
+        n //= a
+    return res[::-1]
+
+for n in range (1, 13):
+    n1 = f(n, 6)
+    if n%3 == 0:
+        n1 = n1[-1] + n1 + '11'
+    else:
+        n1 = n1 + f(n%3 * 6, 6)
+    r = int(n1, 6)
+    
+    if r > 230:
+        s = min(r, s)
+print(s)
+"""
+
+# 6 - я не умею
+
+# 7 - 9
+"""
+for n in range(100000000000000000000):
+    if ((600*800) * n)*0.77 > 136 * 1024 * 8:
+        print(n)
+        break
+
+"""
+
+# 8 - 657
+"""
+alp = sorted('ботай')
+k = 1
+s = 0
+for a in alp:
+    for b in alp:
+        for c in alp:
+            for d in alp:
+                for e in alp:
+                    for f in alp:
+                        w = a + b + c + d + e + f
+                        if k == 657:
+                            print(w)
+                        if s == 0 and a != 'т' and w.count('ао')==w.count('оа')==w.count('оо')==w.count('аа') == 0 and (w.count('а') + w.count('о')) == 2:
+                            print(k)
+                            s = 1
+                        
+                        k += 1
+"""
+
+# 9 - 842
+"""
+s = 0
+f = open("C:\\Users\\Home4\\Downloads\\9.csv")
+for x in f:
+    x = sorted(list(map(int, x[:-1].split(','))))
+    
+    if len(set(x)) == 4:
+        if x.count(x[0]) == 1:
+            s = sum(x)
+            
+print(s)
+"""
+
+# 10 - 15279255254
+"""
+import ipaddress
+net = ipaddress.ip_network('152.67.93.26/255.240.0.0', False)
+
+print(net[-2])
+"""
+
+# 11 - 129
+"""
+for n in range(1000000000000000000000000000000):
+    if 115216 * (136 * n + 7)//8 >= 14 * 1024 * 1024:
+        print(n)
+        break
+"""
+
+# 12 - головка, я не знаю как делать
+
+# 13 - 2200
+"""
+f = [0]*1000
+f[3] = 1
+
+for n in range(3, 40):
+    f[n+2] += f[n]
+    f[n+5] += f[n]
+    f[n*2] += f[n]
+    f[42] = 0
+
+print(f[40]) # от 40 до 53 можно дойти только прибовление еденичек
+"""
+
+# 14 - 
+"""
+def f(n):
+    res = 0
+    d = 0
+    a = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop'
+    for i in str(n)[::-1]:
+        res += (a.index(i)* 52**d )
+        d += 1
+    return res 
+a = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop'
+for x in a[::-1]:
+    if (f(f'KAT{x}YA') + f(f'MIL{x}ANA') + f(f'VERON{x}IKA'))%50 == 0:
+        print((f(f'KAT{x}YA') + f(f'MIL{x}ANA') + f(f'VERON{x}IKA'))/50)
+        break
+"""
+
+# 15 - 513
+
+# 16 - 16390350
+"""
+f = [0] * 100000
+f[1] = 5
+for n in range(2, 2027):
+    f[n] = 2*n*f[n-1] + 11
+
+print((f[2026] - 5*f[2025])/f[2024])
+"""
+
+# 17 - 166 278703
+"""
+f = open("17 (1).txt")
+f = list(map(int, f))
+m, n, s, k = 10000000000, 0, 0, 0
+for x in f:
+    if x % 73 == 0:
+        m = min(x, m)
+    if x % 100 == 16:
+        n = max(x, n)
+
+for i in range(2, len(f)):
+    a, b, c = int(f[i-2]), int(f[i-1]), int(f[i])
+    if int(a%m == 0) + int(b%m == 0) + int(c%m == 0) == 1:
+        if a + b + c >= n:
+            k += 1
+            s = max(a+b+c, s)
+
+print(k, s)
+"""
+
+# 18 - 2685 724
+
+# 19 - 73     (188/2 - 14 - 7)
+# 20 - 42 43
+# 21 - 70
+
+# 22 - 35
+
+# 24 - 517
+"""
+f = list(open("24.txt"))[0].lower() + 'x'
+alp = '0123456789abcdefg'
+s, t = 0, 0
+
+for i in f:
+    if i in alp:
+        t += 1
+    else:
+        s = max(s, t)
+        t = 0
+print(s)
+"""
+
+
+
