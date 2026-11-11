@@ -1,0 +1,245 @@
+# 13
+
+# 413
+"""
+f = [0]*100
+f[1] = 1
+for n in range(1, 15):
+    f[n+1] += f[n]
+    f[n+3] += f[n]
+    f[n*2] += f[n]
+print(f[15])
+"""
+
+# 104
+"""
+f = [0]*1000
+f[1] = 1
+
+for n in range(1, 15):
+    f[n+1] += f[n]
+    f[n*2] += f[n]
+    f[n*2 + 1] += f[n]
+    f[n*10] += f[n]
+print(f[15])
+"""
+
+# 20
+"""
+def f(a, b):
+    f = [0]*10000
+    f[a] = 1
+    
+    for i in range(a, b):
+        f[i+1] += f[i]
+        f[i*2] += f[i]
+    
+    return f[b]
+
+print(f(1, 10) * f(10, 20))
+
+"""
+
+# 65
+"""
+def f(a, b):
+    f = [0]*10000
+    f[a] = 1
+    
+    for i in range(a, b):
+        f[i+1] += f[i]
+        f[i+3] += f[i]
+        f[i*2] += f[i]
+    return f[b]
+
+print(f(3, 9)*f(9, 12)*f(12,20))
+"""
+
+# 222
+"""
+def f(a, b):
+    f = [0]*10900
+    f[a] = 1
+    
+    for i in range(a, b):
+        f[i+2] += f[i]
+        f[i*3] += f[i]
+        f[6] = 0
+    return f[b]
+
+print(f(1, 25)*f(25, 63))
+"""
+
+# 313
+"""
+def f(a, b):
+    f = [0]*10000
+    f[a] = 1
+    
+    for i in range(a, b, -1):
+        f[i-1] += f[i]
+        f[i-3] += f[i]
+        f[i//3] += f[i]
+    return f[b]
+        
+print(f(22, 2))
+"""
+
+#473
+"""
+def f(a, b):
+    f = [0]*10000
+    f[a] = 1
+    
+    for i in range(a, b):
+        f[i+2] += f[i]
+        f[i+i-1] += f[i]
+        f[i+i+1] += f[i]
+        f[43] = 0
+    return f[b]
+
+print(f(7, 63))
+"""
+
+#504
+"""
+def f(a, b):
+    f = [0]*100000
+    f[a] = 1
+    
+    for i in range(a, b):
+        f[i+2] += f[i]
+        f[i+3] += f[i]
+        f[int( str(i)+'1' )] += f[i]
+    return f[b]
+
+print(f(3, 12) * f(12, 25))
+"""
+
+#729
+"""
+def f(a, b):
+    f = [0]*10000
+    f[a] = 1
+    
+    for i in range(a, b):
+        f[i+1] += f[i]
+        f[i+3]+= f[i]
+        f[12] = 0
+    return f[b]
+
+print(f(7, 27)*f(27, 50))
+"""
+
+#785
+"""
+def f(a, b):
+    f = [0]*10000
+    f[a] = 1
+    
+    for i in range(a, b):
+        f[i+1] += f[i]
+        f[i+ i+1+i%2] += f[i]
+        f[i*2] += f[i]
+    return f[b]
+
+print(f(3, 25)*f(25, 75))
+"""
+
+#29977
+"""
+def f(a, b):
+    f = [0]*10000
+    f[a] = 1
+    
+    for i in range(a, b, -1):
+        f[i-1] += f[i]
+        f[i-3] += f[i]
+        f[i//2] += f[i]
+        f[9] = 0
+    return f[b]
+
+print(f(19, 12)*f(12, 3))
+"""
+
+
+# 7 
+
+# 356
+"""
+for n in range(10, 1, -1):
+    if 1280*1920 * n <= 1500 * 1024 * 8:
+        print(2**n)
+        break
+"""
+
+# 358
+# print(68 / 2 * 3 / 6)
+
+# 354
+# print(27 / 2 / 1.5 * 2)
+
+#919
+#print((640*480 * 16 * 24*5*60 + 2*10*40000*5*60)/8 / 1024/ 1024) # 4247.3602294921875 -> 4248
+
+#980
+"""
+for n in range(10, 1, -1):
+    if 320*480 * n <= 40 * 1024 * 8:
+        print(2**n)
+        break
+
+"""
+
+#1190
+"""
+for n in range(100, 1, -1):
+    if 2 * 44000 * 325 * n <= 82 * 1024 * 1024 * 8:
+        print(n)
+        break
+ """   
+    
+# 1215
+"""
+for n in range(1000, 1, -1):
+    if 2 * 64000 * 255 * n <= 125 * 1024 * 1024 * 8:
+        print(n)
+        break
+"""
+
+# 1362
+"""
+for n in range(1000, 1, -1):
+    if 2 * 80000 * 205 * n <= 80 * 1024 * 1024 * 8:
+        print(n)
+        break
+ """   
+    
+#3213
+"""
+for n in range(10,1 , -1):
+    if 486*720 * n * 0.85 <= 80 * 1024 * 8:
+        print(2**n)
+        break
+"""
+
+# 3360
+"""
+for n in range(10, 1, -1):
+    if 1200*1800 * n * 0.75 + 40 * 1024 * 8 <= 1 * 1024 * 1024 * 8:
+        print(2**n)
+        break
+"""    
+
+# 4587
+"""
+for n in range(16, 1, -1):
+    if 640*256 * n / 1.35 <= 170 * 1024 * 8:
+        print(n, 2 ** n)
+        break
+"""
+
+
+
+
+    
